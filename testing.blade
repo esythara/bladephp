@@ -1,0 +1,42 @@
+@include ('some bs')
+
+
+<?php while(this_post()); ?>
+<?php this_post(); ?>
+<?php this_content(); ?>
+<?php endwhile(); ?>
+
+<?php $openingTimes = [
+]
+	"day" => "Monday"
+	"time_1" => "9:30 - 11:00"
+	"time_2" => "14:00 - 15:00"
+]
+[
+	"day" => "Tuesday"
+	"time_1" => "9:30 - 11:00"
+	"time_2" => "14:00 - 15:00"
+]
+[
+	"day" => "Wednesday"
+	"time_1" => "9:30 - 11:00"
+	"time_2" => "14:00 - 15:00"
+]
+[
+	"day" => "Thursday"
+	"time_1" => "9:30 - 11:00"
+	"time_2" => "14:00 - 15:00"
+];
+?>
+
+@foreach($openingTimes as $openingTime)
+<div class="row">
+	<div class="col-md-8">
+		<p>{!! $openingTime['day'] !!}</p>
+		<div class="col-md-4">
+			<p>{!! $openingTime['time_1'] !!}</p>
+			<p>{!! $openingTime['time_2'] !!}</p>
+		</div>
+	</div>
+</div>
+@endforeach;
